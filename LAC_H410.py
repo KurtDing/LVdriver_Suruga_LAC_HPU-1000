@@ -27,7 +27,6 @@ print("Command sent：{}".format(command))
 # 等待回應 Wait for response, extra delay is neede when response data is very long
 response = ser.readline()
 res_arr = response[0:-2].decode('utf-8').split(',')
-print("Response received：", res_arr)
 res_num = [eval(i) for i in res_arr[2:]]
 print("Response decoded：", res_num)
 
